@@ -31,6 +31,15 @@
 <p>changes tested and shipped quickly/safely</p>
 <p>CI focuses on integrating code changes frequently and testing</p>
 <p>CD focuses on continuous delivery/deployment, automatically deploying to production</p>
+<h3 id="continuous-delivery-vs-continuous-deployment">Continuous Delivery vs Continuous Deployment</h3>
+<p>The difference between these is deceptively small, In Continuous Delivery, the deployment process is automated, but a manual decision is made at the very end to push the code live to production</p>
+<p>Continuous Deployment is the same except that there is no manual decision step, all changes all automatically pushed to production (assuming it passes all tests)</p>
+<p>The benefits of Continuous Deployment are</p>
+<ul>
+<li><p>More frequent updates to production</p></li>
+<li><p>Faster feedback on every change (meaning bugs isolated and caught faster)</p></li>
+</ul>
+<p>The downsides are largely mitigated by version control, if something goes horribly wrong you can simply role back while you fix the issue</p>
 <h3 id="security-devsecops">Security (DevSecOps)</h3>
 <p>Check security with CI/CD</p>
 <p>e.g. static analysis, dependency checking, vulnerability scanning, ensuring secure coding practices.</p>
