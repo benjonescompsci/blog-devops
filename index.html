@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>DevOps</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+</head>
+<body>
+<h1 id="what-is-it">What is it?</h1>
+<p>Dev – Software development</p>
+<p>Ops – IT Operations</p>
+<h1 id="primary-goals">Primary Goals</h1>
+<ul>
+<li><p>Speed</p></li>
+<li><p>Automation</p></li>
+<li><p>Reliability</p></li>
+</ul>
+<h1 id="parts-involved">Parts Involved</h1>
+<h2 id="cicd">CI/CD</h2>
+<p>testing, building, and deploying</p>
+<p>e.g. Gitlab, GitHub actions, Jenkins</p>
+<p>changes tested and shipped quickly/safely</p>
+<p>CI focuses on integrating code changes frequently and testing</p>
+<p>CD focuses on continuous delivery/deployment, automatically deploying to production</p>
+<h3 id="security-devsecops">Security (DevSecOps)</h3>
+<p>Check security with CI/CD</p>
+<p>e.g. static analysis, dependency checking, vulnerability scanning, ensuring secure coding practices.</p>
+<p>e.g. OWASP ZAP, Snyk, Aqua Security</p>
+<h2 id="hosting">Hosting</h2>
+<p>Cloud infrastructure for servers and resources</p>
+<p>e.g. AWS, Azure, Google Cloud</p>
+<h3 id="aws-explained">AWS explained</h3>
+<ul>
+<li><p>EC2 (virtual servers)</p></li>
+<li><p>S3 (object storage)</p></li>
+<li><p>IAM (permissions)</p></li>
+<li><p>VPC (virtual networking to isolate resources)</p></li>
+</ul>
+<h3 id="iac-infrastructure-as-code">IaC (Infrastructure as Code)</h3>
+<p>Automate cloud infrastructure using code instead of manually setting up a system and environment</p>
+<p>You declare what your e.g. server/servers (maybe load balancing)/database should look like and it is created when needed, you don’t modify the infrastructure itself for changes but instead the code used to generate it</p>
+<p>Ensures Consistency, Speed, and Scalability of your infrastructure</p>
+<p>Allows Infrastructure state to be version controlled and rolled back if needed</p>
+<p>e.g. Terraform Ansible CloudFormation</p>
+<h4 id="scaling">Scaling</h4>
+<p>You infrastructure can automatically (autoscaling) add or remove servers (horizontal scaling) or add/remove RAM/Compute (vertical scaling) depending on current demand/traffic</p>
+<ul>
+<li><p>Efficient</p>
+<ul>
+<li><p>Only use what is needed to save money, everything utilised</p></li>
+</ul></li>
+<li><p>Performant</p>
+<ul>
+<li><p>Your app grows to meet any demand</p></li>
+</ul></li>
+</ul>
+<p>Horizontal scaling is preferred as it is more cost effective and flexible</p>
+<h4 id="containers-orchestration">Containers &amp; Orchestration </h4>
+<p>You want to deploy apps in containers for consistency and isolation</p>
+<p>But you need to orchestrate between containers if you are using multiple, and you need to minimise downtime when updating containers, there are tools to do this automatically</p>
+<p>e.g. you have containers for:</p>
+<ul>
+<li><p>Front end</p></li>
+<li><p>Back end</p></li>
+<li><p>Database</p></li>
+<li><p>Redundancy</p></li>
+</ul>
+<p>Some of these need to communicate with others e.g. front and back end, some need to step in if another crashes</p>
+<p>e.g. Docker, Kubernetes</p>
+<h4 id="reliability">Reliability</h4>
+<p>Must maximise uptime by preventing going down and recovering fast</p>
+<h5 id="redundancy">Redundancy</h5>
+<ul>
+<li><p>Having your infrastructure load balance over multiple servers</p></li>
+<li><p>Backups</p></li>
+</ul>
+<h5 id="self-healing">Self-Healing</h5>
+<p>Automatically restarting containers that have crashed (Detected by monitoring)</p>
+<h5 id="monitoringlogging">Monitoring/Logging</h5>
+<p>catch bugs or performance issues early</p>
+<p>e.g. Prometheus (metrics) + Grafana (visualising), ELK stack for data interpretation (Elasticsearch, Logstash, Kibana), Datadog or New Relic</p>
+<h2 id="planning-collaboration">Planning &amp; collaboration</h2>
+<p>dev and ops teams collaborate</p>
+<p>Tools like JIRA or Trello for project tracking.</p>
+<p>Generally agile techniques promote this approach</p>
+<h3 id="git-vc-and-collaboration">Git VC and Collaboration</h3>
+<p>e.g. GitHub, collaboration via</p>
+<ul>
+<li><p>pull requests</p></li>
+<li><p>code reviews</p></li>
+<li><p>CI/CD integration</p></li>
+</ul>
+</body>
+</html>
